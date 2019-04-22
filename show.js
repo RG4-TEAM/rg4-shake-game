@@ -72,6 +72,11 @@ window.onload = function() {
   var currentScoreRef = firebase.database().ref("currentScore");
   currentScoreRef.once("value").then(function(currentScoreSnapshot) {
     var currentScore = currentScoreSnapshot.val();
+    if (currentScore == 0) {
+      $("#progress-bar").css("width", "0%");
+      $("#percentage_label").text("0%");
+      return;
+    }
     firebase
       .database()
       .ref("goalScore")
@@ -96,6 +101,7 @@ window.onload = function() {
     if (currentScore == 0) {
       $("#progress-bar").css("width", "0%");
       $("#percentage_label").text("0%");
+      return;
     }
     firebase
       .database()

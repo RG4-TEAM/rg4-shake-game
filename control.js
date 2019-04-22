@@ -114,6 +114,7 @@ window.onload = function() {
   });
 
   $("#resetCurrentScore").click(function() {
+    // reset from user's score
     firebase
       .database()
       .ref("Users")
@@ -126,6 +127,8 @@ window.onload = function() {
       .catch(function(error) {
         alert("ไม่สามารถรีเซตคะแนนทั้งหมดได้...");
       });
+
+      currentScoreRef.set(0);
   });
 
   $("#removeAllUser").click(function() {
