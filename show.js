@@ -58,6 +58,15 @@ window.onload = function() {
       $("#status_label").text("เปิดการใช้งานระบบสารสนเทศฯ เรียบร้อยแล้ว...");
       $("#progress-bar").removeClass("bg-success bg-primary bg-danger");
       $("#progress-bar").addClass("bg-success");
+      // alert("completed now");
+      setTimeout(function() {
+        // $("body").remove(800);
+        window.location.href = "video.php";
+        // window.location.href = "completed.php";
+      }, 2000);
+      // setTimeout(function() {
+      //   alert("timeout now");
+      // }, 1000);
     }
   });
 

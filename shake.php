@@ -1,3 +1,8 @@
+<?php 
+  if(!isset($_POST['employeeCode'])){
+    header('Location: register.php');
+  } 
+?>
 <?php include("./header.php"); ?>
   <input type="hidden" id="employeeCode" name="employeeCode" value="<?= trim($_POST['employeeCode']) ?>" />
   <div class="row pt-5">

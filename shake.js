@@ -27,13 +27,13 @@ window.onload = function() {
       dataSnapshot.child(employeeCode + "/score").ref.set(0);
       return;
     }
-    var score = dataSnapshot.child(employeeCode + "/score").val();
-    $("#current_score").text(score);
+    // var score = dataSnapshot.child(employeeCode + "/score").val();
+    // $("#current_score").text(score);
   });
-  usersRef.child(employeeCode + "/score").on("value", function(dataSnapshot) {
-    var currentScore = dataSnapshot.val();
-    $("#current_score").text(currentScore);
-  });
+  // usersRef.child(employeeCode + "/score").on("value", function(dataSnapshot) {
+  //   var currentScore = dataSnapshot.val();
+  //   $("#current_score").text(currentScore);
+  // });
 
   // listener game start
   var statusRef = firebase.database().ref("status");
@@ -57,7 +57,7 @@ window.onload = function() {
   });
 
   // listener shaking event
-  var shakeEvent = new Shake({ threshold: 15 });
+  var shakeEvent = new Shake({ threshold: 4 });
   shakeEvent.start();
   window.addEventListener(
     "shake",
@@ -75,9 +75,9 @@ window.onload = function() {
             .once("value")
             .then(function(dataSnapshot) {
               var currentScore = dataSnapshot.val();
-              var randomScore = parseInt(Math.random() * 10 + 1);
+              var randomScore = parseInt(Math.random() * 15 + 1);
               dataSnapshot.ref.set(currentScore + randomScore);
-              $("#current_score").text(currentScore + randomScore);
+              // $("#current_score").text(currentScore + randomScore);
             });
         }
 
@@ -88,6 +88,17 @@ window.onload = function() {
     },
     false
   );
+
+  firebase
+    .database()
+    .ref("currentScore")
+    .on("value", function(currentScoreSnapshot) {
+      var currentScore = currentScoreSnapshot.val();
+      $("#current_score").text(currentScore);
+      // firebase.database().ref('goalScore').once('value').then(function(goalScoreSnapshot){
+      //   var goalScore = goalScoreSnapshot.val();
+      // })
+    });
 
   //stop listening
   function stopShake() {
