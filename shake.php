@@ -13,8 +13,8 @@
             <h2 class="font-weight-bold text-center" id="status_label"></h2>
             <div class="text-center row">
               <div class="col-12 pt-3">
-                <div class="display-3" id="current_score">...</div><br/>
-                <h4 id="score_label" class="font-weight-bold">%</h4>
+                <div class="display-3 font-weight-bold" id="current_score">...</div><br/>
+                <!-- <h4 id="score_label" class="font-weight-bold">%</h4> -->
               </div>
             </div>
           </div>

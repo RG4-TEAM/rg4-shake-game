@@ -23,7 +23,7 @@ window.onload = function() {
     .set(firebase.database.ServerValue.TIMESTAMP);
   usersRef.once("value").then(function(dataSnapshot) {
     if (!dataSnapshot.child(employeeCode).hasChild("score")) {
-      $("#current_score").text(0);
+      $("#current_score").text("0 %");
       dataSnapshot.child(employeeCode + "/score").ref.set(0);
       return;
     }
@@ -95,7 +95,7 @@ window.onload = function() {
     .ref("currentScore")
     .on("value", function(currentScoreSnapshot) {
       var currentScore = currentScoreSnapshot.val();
-      $("#current_score").text(currentScore);
+      $("#current_score").text(currentScore + " %");
       // firebase.database().ref('goalScore').once('value').then(function(goalScoreSnapshot){
       //   var goalScore = goalScoreSnapshot.val();
       // })
