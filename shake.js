@@ -75,7 +75,8 @@ window.onload = function() {
             .once("value")
             .then(function(dataSnapshot) {
               var currentScore = dataSnapshot.val();
-              var randomScore = parseInt(Math.random() * 15 + 1);
+              var randomScore = parseInt(Math.random() > 0.75 ? 1 : 0);
+              // var randomScore = parseInt(Math.random() * 15 + 1);
               dataSnapshot.ref.set(currentScore + randomScore);
               // $("#current_score").text(currentScore + randomScore);
             });

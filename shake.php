@@ -14,7 +14,7 @@
             <div class="text-center row">
               <div class="col-12 pt-3">
                 <div class="display-3" id="current_score">...</div><br/>
-                <h4 id="score_label" class="font-weight-bold">คะแนน</h4>
+                <h4 id="score_label" class="font-weight-bold">%</h4>
               </div>
             </div>
           </div>
