@@ -59,6 +59,7 @@ window.onload = function() {
       $("#progress-bar").removeClass("bg-success bg-primary bg-danger");
       $("#progress-bar").addClass("bg-success");
       // alert("completed now");
+      $("body").fadeOut(2200);
       setTimeout(function() {
         // $("body").remove(800);
         window.location.href = "video.php";

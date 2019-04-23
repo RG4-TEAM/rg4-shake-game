@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="card shadow-sm p-2">
         <div class="card-body">
-          <h5 class="font-weight-bold text-center">ลงทะเบียนเปิดการใช้งานระบบสารสนเทศ<br/>การไฟฟ้าส่วนภูมิภาคโปร่งใสอย่างยั่งยืน 2562</h5>
+          <h5 class="font-weight-bold text-center">ลงทะเบียนเปิดการใช้งานระบบสารสนเทศ<br/>การไฟฟ้าส่วนภูมิภาคโปร่งใส 2562</h5>
           <div class="text-center row">
             <div class="col-12 pt-3">
               <form method="POST" action="shake.php">
