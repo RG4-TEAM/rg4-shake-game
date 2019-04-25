@@ -10,6 +10,9 @@
       <div class="card shadow p-2" style="border-radius:20px 20px;">
         <div class="card-body">
           <div id="color_label">
+            <div class="text-center mb-3">
+              <img src="./assets/trans-logo.jpg" class="img-fluid"/>
+            </div>
             <h2 class="font-weight-bold text-center" id="status_label"></h2>
             <div class="text-center row">
               <div class="col-12 pt-3">

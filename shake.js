@@ -40,7 +40,7 @@ window.onload = function() {
   statusRef.on("value", function(dataSnapshot) {
     var status = dataSnapshot.val();
     if (status == "active") {
-      $("#status_label").text("เขย่าได้เลย...");
+      $("#status_label").text("เขย่ามือถือของท่านได้เลย...");
       $("#color_label").removeAttr("class");
       $("#color_label").addClass("text-primary");
       $("#current_score").show();
@@ -95,10 +95,15 @@ window.onload = function() {
     .ref("currentScore")
     .on("value", function(currentScoreSnapshot) {
       var currentScore = currentScoreSnapshot.val();
-      $("#current_score").text(currentScore + " %");
-      // firebase.database().ref('goalScore').once('value').then(function(goalScoreSnapshot){
-      //   var goalScore = goalScoreSnapshot.val();
-      // })
+      firebase
+        .database()
+        .ref("goalScore")
+        .once("value")
+        .then(function(goalScoreSnapshot) {
+          var goalScore = goalScoreSnapshot.val();
+          var percentage = parseInt((currentScore * 100) / goalScore);
+          $("#current_score").text(percentage + " %");
+        });
     });
 
   //stop listening

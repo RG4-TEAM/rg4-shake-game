@@ -58,16 +58,11 @@ window.onload = function() {
       $("#status_label").text("เปิดการใช้งานระบบสารสนเทศฯ เรียบร้อยแล้ว...");
       $("#progress-bar").removeClass("bg-success bg-primary bg-danger");
       $("#progress-bar").addClass("bg-success");
-      // alert("completed now");
+      // timeout to fadeOut
       $("body").fadeOut(2200);
       setTimeout(function() {
-        // $("body").remove(800);
         window.location.href = "video.php";
-        // window.location.href = "completed.php";
       }, 2000);
-      // setTimeout(function() {
-      //   alert("timeout now");
-      // }, 1000);
     }
   });
 
@@ -96,7 +91,7 @@ window.onload = function() {
         var percentage = parseInt((currentScore * 100) / goalScore);
         $("#progress-bar").css("width", percentage + "%");
         $("#percentage_label").text(percentage + "%");
-        if (percentage >= 100) {
+        if (percentage >= 80) {
           $("#progress-bar").css("width", "100%");
           $("#percentage_label").text("100%");
           firebase
@@ -122,7 +117,7 @@ window.onload = function() {
         var percentage = parseInt((currentScore * 100) / goalScore);
         $("#progress-bar").css("width", percentage + "%");
         $("#percentage_label").text(percentage + "%");
-        if (percentage >= 100) {
+        if (percentage >= 80) {
           $("#progress-bar").css("width", "100%");
           $("#percentage_label").text("100%");
           firebase

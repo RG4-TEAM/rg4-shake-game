@@ -3,6 +3,9 @@
     <div class="col-12">
       <div class="card shadow-sm p-2">
         <div class="card-body">
+          <div class="text-center">
+            <img src="./assets/trans-logo.jpg" class="img-fluid"/>
+          </div>
           <h5 class="font-weight-bold text-center">ลงทะเบียนเปิดการใช้งานระบบสารสนเทศ<br/>การไฟฟ้าส่วนภูมิภาคโปร่งใส 2562</h5>
           <div class="text-center row">
             <div class="col-12 pt-3">
