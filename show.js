@@ -91,7 +91,7 @@ window.onload = function() {
         var percentage = parseInt((currentScore * 100) / goalScore);
         $("#progress-bar").css("width", percentage + "%");
         $("#percentage_label").text(percentage + "%");
-        if (percentage >= 80) {
+        if (percentage >= 79) {
           $("#progress-bar").css("width", "100%");
           $("#percentage_label").text("100%");
           firebase
